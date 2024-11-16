@@ -68,18 +68,19 @@ def get_device_list(access_token: str, device_list_url: str) -> List[dict]:
 
 # Beispiel: Nutzung der Funktionen
 
-# username = "atrox06+zendureha@gmail.com"
-# password = "dSYU8l%d*qozu2^Dorz"
-# token_url = "https://app.zendure.tech/eu/auth/app/token"  
-# device_list_url = "https://app.zendure.tech/eu/productModule/device/queryDeviceListByConsumerId"  
+if __name__ == "__main__":
+    username = "atrox06+zendureha@gmail.com"
+    password = "dSYU8l%d*qozu2^Dorz"
+    token_url = "https://app.zendure.tech/eu/auth/app/token"  
+    device_list_url = "https://app.zendure.tech/eu/productModule/device/queryDeviceListByConsumerId"  
 
-# # Anmeldung und Token-Abruf
-# access_token = login(username, password, token_url)
+    # Anmeldung und Token-Abruf
+    access_token = login(username, password, token_url)
 
-# # Abrufen der Geräteliste, falls Token erfolgreich erhalten
-# if access_token:
-#     print(access_token)
-#     devices = get_device_list(access_token, device_list_url)
-#     print("Abgerufene Geräte:", devices)
-# else:
-#     print("Anmeldung fehlgeschlagen.")
+    # Abrufen der Geräteliste, falls Token erfolgreich erhalten
+    if access_token:
+        print(access_token)
+        devices = get_device_list(access_token, device_list_url)
+        print("Abgerufene Geräte:", devices)
+    else:
+        print("Anmeldung fehlgeschlagen.")
